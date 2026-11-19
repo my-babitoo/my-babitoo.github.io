@@ -6,23 +6,22 @@
 <title>لـ بابيتو ❤️</title>
 <style>
 *{box-sizing:border-box}
-body{background:#000;color:white;font-family:Arial;text-align:center;margin:0;padding:0;overflow-x:hidden}
+body{background:#000;color:white;font-family:Arial;text-align:center;margin:0;padding:0}
 .card{max-width:420px;margin:auto;padding:20px}
 .lock-card{background:#1a0000;border:2px solid #ff1e3c;border-radius:25px;padding:25px;max-width:380px;margin:40px auto}
 input{width:70px;padding:12px;margin:5px;border-radius:12px;border:1px solid #ff1e3c;background:#000;color:white;text-align:center;font-size:18px}
 button{background:#ff1e3c;color:white;border:none;padding:13px 30px;border-radius:20px;font-size:18px;margin-top:15px;cursor:pointer}
 #gift{display:none}
-/* القلب الكبير في الاول */
+.top-song{background:#0a0000;border:1px solid #3a1111;border-radius:30px;padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0 20px;font-size:18px}
+.top-song span{width:52px;height:52px;background:#ff1e3c;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer}
 .top-heart{position:relative;margin:10px 0 0}
-.big-heart{font-size:170px;line-height:1;text-shadow:0 0 30px #ff1e3c,0 0 60px #ff1e3c,0 0 90px #ff0022;animation:beat 1.4s infinite}
+.big-heart{font-size:170px;line-height:1;text-shadow:0 0 30px #ff1e3c,0 0 60px #ff1e3c;animation:beat 1.4s infinite}
 @keyframes beat{0%,100%{transform:scale(1)}25%{transform:scale(1.08)}40%{transform:scale(0.98)}60%{transform:scale(1.05)}}
-.love-pill{position:absolute;left:50%;top:62%;transform:translateX(-50%);background:rgba(0,0,0,.55);border:1px solid #777;border-radius:30px;padding:7px 22px;font-size:19px;backdrop-filter:blur(4px)}
-.hamoudy{font-size:72px;font-style:italic;margin:8px 0 5px;color:white;letter-spacing:1px}
+.love-pill{position:absolute;left:50%;top:62%;transform:translateX(-50%);background:rgba(0,0,0,.55);border:1px solid #777;border-radius:30px;padding:7px 22px;font-size:19px}
+.hamoudy{font-size:72px;font-style:italic;margin:8px 0 5px}
 .msg-box{border:1px solid #3a1111;border-radius:20px;padding:18px;margin:25px 0;background:#0d0000;line-height:1.9;font-size:16px}
 .days{margin:20px 0;font-size:18px;color:#ffb3bc}
 .days b{font-size:42px;color:#ff1e3c;margin:0 6px}
-.music-btn{background:#0a0000;border:1px solid #3a1111;border-radius:30px;padding:10px 18px;display:flex;align-items:center;justify-content:center;gap:12px;margin:10px auto;width:220px;font-size:18px}
-.music-btn span{width:52px;height:52px;background:#ff1e3c;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px}
 .section-title{font-size:26px;font-style:italic;margin:40px 0 20px;text-align:right;padding-right:10px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:5px}
 .polaroid{background:#0a0000;border:2px solid #4a0000;border-radius:12px;padding:6px 6px 12px;transform:rotate(-3deg)}
@@ -35,7 +34,7 @@ button{background:#ff1e3c;color:white;border:none;padding:13px 30px;border-radiu
 @keyframes spin{to{transform:rotate(360deg)}}
 .player-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #ff6b7a, #c8001e);border:2px solid #ff1e3c;font-size:38px;color:white;cursor:pointer;box-shadow:0 0 40px #ff1e3c}
 .progress{width:90%;height:6px;background:#222;border-radius:10px;margin:25px auto 8px;overflow:hidden}
-.progress div{height:100%;width:0%;background:#ff1e3c;transition:width .3s}
+.progress div{height:100%;width:0%;background:#ff1e3c}
 .times{display:flex;justify-content:space-between;width:90%;margin:auto;font-size:13px;color:#ffb3bc}
 iframe#yt{width:1px;height:1px;opacity:0;position:absolute;pointer-events:none}
 </style>
@@ -52,85 +51,4 @@ iframe#yt{width:1px;height:1px;opacity:0;position:absolute;pointer-events:none}
 </div>
 
 <div id="gift" class="card">
-<div class="top-heart">
-<div class="big-heart">❤️</div>
-<div class="love-pill">بحبك ❤️</div>
-</div>
-<div class="hamoudy">Hamoudy</div>
-
-<div class="msg-box">
-كل سنة وانت حبيبي ❤️<br><br>
-النهاردة من سنة بالظبط انت اعترفتلي بحبك، ودي كانت أحلى سنة عدت عليا.<br><br>
-السنة دي مكنتش كلها سهلة، احنا اتخانقنا كتير أوي، وزعلنا من بعض كتير، وكان فيه أيام كنت بحس إننا مش هنكمل. بس رغم كل ده، احنا لسه مع بعض، ولسه مكملين، وده اللي مخليني متأكدة إن حبنا ده حب حقيقي.<br><br>
-احنا سند بعض بجد، في الحلوة وفي الوحشة، لما بقع بلاقيك انت واقف جنبي وساندني، ولما بتقع أنا بكون جنبك. ومفيش خناقة ولا زعل قدر يبعدنا عن بعض.<br><br>
-أنا عارفة إننا لسه هنتخانق تاني، وهنزعل تاني، بس اللي متأكدة منه إننا هنرجع لبعض تاني، عشان احنا مش بنعرف نبعد عن بعض.<br><br>
-ربنا يجمعنا في الحلال يا رب، ونفضل سند بعض طول العمر، ونعدي كل حاجة مع بعض بإذن الله.<br><br>
-بحبك يا حبيب عمري ♥️
-</div>
-
-<div class="days">بقالنا <b id="daysCount">365</b> يوم مع بعض</div>
-<button class="music-btn" onclick="toggleMusic()">❤️ أغنيتنا <span id="playIcon">▶️</span></button>
-<p style="font-size:13px;color:#aaa">أجمل فرحة - مها</p>
-<iframe id="yt" src="https://www.youtube.com/embed/lC_oE025a1g?enablejsapi=1" allow="autoplay"></iframe>
-
-<div class="section-title">لحظاتنا ✨</div>
-<div class="gallery">
-<div class="polaroid"><img src="https://i.postimg.cc/tg209vTr/5270b323-ff8d-4a5a-bdb1-17045dbb05cb.jpg"><p>لما عرفت إنك بتدعيلي في صلاتك إني أكون من نصيبك، عرفت إن حبك ده حب نضيف وحقيقي.</p></div>
-<div class="polaroid"><img src="https://i.postimg.cc/zfWjjymh/IMG-5175.jpg"><p>مش محتاجة حد في الدنيا طول ما انت جنبي، انت الأمان بتاعي كله.</p></div>
-<div class="polaroid"><img src="https://i.postimg.cc/Dy94cB20/89d49171-1c57-4d5d-98ee-524ede0ec88f.jpg"><p>على اسمك أنا عم البس خاتم عمري</p></div>
-<div class="polaroid"><img src="https://i.postimg.cc/zGY3hvj3/f4e66d1a-1553-4a2f-a20e-39f168dc84d0.jpg"><p>يومها الفرحة مكنتش سايعة قلبي خالص، كنت أسعد واحدة في الدنيا.</p></div>
-<div class="polaroid"><img src="https://i.postimg.cc/gJLnRZfd/568b2502-6e1c-4952-833d-a68870fedd28.jpg"><p>ولا ولا يا أبو خد جميل، ولا ولا يا أبو رمش كحيل 🤭♥️</p></div>
-<div class="polaroid"><img src="https://i.postimg.cc/HnhmtZXs/5a6eab9e-3be2-483a-a76d-a4ff5d3adc20.jpg"><p>يوم 21 / 7 جبت الموتوسيكل، ع الرغم من اني خايفه عليك منه، بس حقيقي مبسوطه وفخوره بيك ♥️</p></div>
-</div>
-
-<div class="record-title">يا احماااا</div>
-<div class="player-wrap">
-<div class="waves" id="waves"></div>
-<button class="player-btn" id="recBtn" onclick="playRecord()">▶️</button>
-</div>
-<div class="progress"><div id="bar"></div></div>
-<div class="times"><span id="cur">0:00</span><span>0:12</span></div>
-<p style="font-size:13px;color:#aaa">دوس عشان تسمع الريكورد 😂</p>
-
-<h2 style="margin-top:30px">بحبك يا حبيب عمري ♥️</h2>
-</div>
-
-<script>
-function openGift(){
-let d=document.getElementById('d').value;
-let m=document.getElementById('m').value;
-let y=document.getElementById('y').value;
-if(d==19 && m==11 && y==2025){
-document.getElementById('lock').style.display='none';
-document.getElementById('gift').style.display='block';
-let start=new Date(2025,10,19);
-let now=new Date();
-document.getElementById('daysCount').innerText=Math.floor((now-start)/(1000*60*60*24));
-}else{document.getElementById('err').innerText='التاريخ غلط، حاول تاني يا بابيتو';}
-}
-let playing=false;
-function toggleMusic(){
-let f=document.getElementById('yt');playing=!playing;
-if(playing){f.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}','*');document.getElementById('playIcon').innerText='⏸️';}
-else{f.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');document.getElementById('playIcon').innerText='▶️';}
-}
-let recPlaying=false, sec=0, timer=null;
-function playRecord(){
-if(!recPlaying){
-window.open('https://vt.tiktok.com/ZSpcDVVpW/','_blank');
-recPlaying=true;
-document.getElementById('recBtn').innerText='⏸️';
-timer=setInterval(()=>{
-sec++; if(sec>12){sec=0;}
-document.getElementById('bar').style.width=(sec/12*100)+'%';
-document.getElementById('cur').innerText='0:'+(sec<10?'0'+sec:sec);
-},1000);
-}else{
-recPlaying=false;
-document.getElementById('recBtn').innerText='▶️';
-clearInterval(timer);
-}
-}
-</script>
-</body>
-</html>
+<!-- الاغنية في الاول -
