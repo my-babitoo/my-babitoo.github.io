@@ -51,4 +51,86 @@ iframe#yt{width:1px;height:1px;opacity:0;position:absolute;pointer-events:none}
 </div>
 
 <div id="gift" class="card">
-<!-- الاغنية في الاول -
+<!-- الاغنية في الاول - شغالة على طول من غير اعلان -->
+<div class="top-song">❤️ أغنيتنا - أجمل فرحة - مها <span id="songBtn" onclick="toggleSong()">▶️</span></div>
+<iframe id="yt" src="https://www.youtube-nocookie.com/embed/lC_oE025a1g?enablejsapi=1&rel=0&modestbranding=1" allow="autoplay"></iframe>
+
+<div class="top-heart">
+<div class="big-heart">❤️</div>
+<div class="love-pill">بحبك ❤️</div>
+</div>
+<div class="hamoudy">Hamoudy</div>
+
+<div class="msg-box">
+كل سنة وانت حبيبي ❤️<br><br>
+النهاردة من سنة بالظبط انت اعترفتلي بحبك، ودي كانت أحلى سنة عدت عليا.<br><br>
+السنة دي مكنتش كلها سهلة، احنا اتخانقنا كتير أوي، وزعلنا من بعض كتير، وكان فيه أيام كنت بحس إننا مش هنكمل. بس رغم كل ده، احنا لسه مع بعض، ولسه مكملين، وده اللي مخليني متأكدة إن حبنا ده حب حقيقي.<br><br>
+احنا سند بعض بجد، في الحلوة وفي الوحشة، لما بقع بلاقيك انت واقف جنبي وساندني، ولما بتقع أنا بكون جنبك. ومفيش خناقة ولا زعل قدر يبعدنا عن بعض.<br><br>
+أنا عارفة إننا لسه هنتخانق تاني، وهنزعل تاني، بس اللي متأكدة منه إننا هنرجع لبعض تاني، عشان احنا مش بنعرف نبعد عن بعض.<br><br>
+ربنا يجمعنا في الحلال يا رب، ونفضل سند بعض طول العمر، ونعدي كل حاجة مع بعض بإذن الله.<br><br>
+بحبك يا حبيب عمري ♥️
+</div>
+
+<div class="days">بقالنا <b id="daysCount">365</b> يوم مع بعض</div>
+
+<div class="section-title">لحظاتنا ✨</div>
+<div class="gallery">
+<div class="polaroid"><img src="https://i.postimg.cc/tg209vTr/5270b323-ff8d-4a5a-bdb1-17045dbb05cb.jpg"><p>لما عرفت إنك بتدعيلي في صلاتك إني أكون من نصيبك، عرفت إن حبك ده حب نضيف وحقيقي.</p></div>
+<div class="polaroid"><img src="https://i.postimg.cc/zfWjjymh/IMG-5175.jpg"><p>مش محتاجة حد في الدنيا طول ما انت جنبي، انت الأمان بتاعي كله.</p></div>
+<div class="polaroid"><img src="https://i.postimg.cc/Dy94cB20/89d49171-1c57-4d5d-98ee-524ede0ec88f.jpg"><p>على اسمك أنا عم البس خاتم عمري</p></div>
+<div class="polaroid"><img src="https://i.postimg.cc/zGY3hvj3/f4e66d1a-1553-4a2f-a20e-39f168dc84d0.jpg"><p>يومها الفرحة مكنتش سايعة قلبي خالص، كنت أسعد واحدة في الدنيا.</p></div>
+<div class="polaroid"><img src="https://i.postimg.cc/gJLnRZfd/568b2502-6e1c-4952-833d-a68870fedd28.jpg"><p>ولا ولا يا أبو خد جميل، ولا ولا يا أبو رمش كحيل 🤭♥️</p></div>
+<div class="polaroid"><img src="https://i.postimg.cc/HnhmtZXs/5a6eab9e-3be2-483a-a76d-a4ff5d3adc20.jpg"><p>يوم 21 / 7 جبت الموتوسيكل، ع الرغم من اني خايفه عليك منه، بس حقيقي مبسوطه وفخوره بيك ♥️</p></div>
+</div>
+
+<div class="record-title">يا احماااا</div>
+<div class="player-wrap">
+<div class="waves"></div>
+<button class="player-btn" id="recBtn" onclick="playRecord()">▶️</button>
+</div>
+<div class="progress"><div id="bar"></div></div>
+<div class="times"><span id="cur">0:00</span><span>0:12</span></div>
+<p style="font-size:13px;color:#aaa">دوس عشان تسمع الريكورد 😂</p>
+
+<h2 style="margin-top:30px">بحبك يا حبيب عمري ♥️</h2>
+</div>
+
+<script>
+function openGift(){
+let d=document.getElementById('d').value;
+let m=document.getElementById('m').value;
+let y=document.getElementById('y').value;
+if(d==19 && m==11 && y==2025){
+document.getElementById('lock').style.display='none';
+document.getElementById('gift').style.display='block';
+let start=new Date(2025,10,19);
+let now=new Date();
+document.getElementById('daysCount').innerText=Math.floor((now-start)/(1000*60*60*24));
+}else{document.getElementById('err').innerText='التاريخ غلط، حاول تاني يا بابيتو';}
+}
+let songPlaying=false;
+function toggleSong(){
+let f=document.getElementById('yt');songPlaying=!songPlaying;
+if(songPlaying){f.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}','*');document.getElementById('songBtn').innerText='⏸️';}
+else{f.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');document.getElementById('songBtn').innerText='▶️';}
+}
+let recPlaying=false, sec=0, timer=null;
+function playRecord(){
+if(!recPlaying){
+window.open('https://vt.tiktok.com/ZSpcDVVpW/','_blank');
+recPlaying=true;
+document.getElementById('recBtn').innerText='⏸️';
+timer=setInterval(()=>{
+sec++; if(sec>12){sec=0;}
+document.getElementById('bar').style.width=(sec/12*100)+'%';
+document.getElementById('cur').innerText='0:'+(sec<10?'0'+sec:sec);
+},1000);
+}else{
+recPlaying=false;
+document.getElementById('recBtn').innerText='▶️';
+clearInterval(timer);
+}
+}
+</script>
+</body>
+</html>
