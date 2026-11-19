@@ -43,15 +43,17 @@ iframe#yt{width:1px;height:1px;opacity:0;position:absolute;pointer-events:none}
 <div id="lock" class="lock-card">
 <h1 style="font-size:50px">❤️</h1>
 <h2>اكتب التاريخ عشان تفتح</h2>
+<div style="display:flex;justify-content:center;direction:ltr">
 <input id="d" placeholder="يوم" type="number">
 <input id="m" placeholder="شهر" type="number">
-<input id="y" placeholder="سنة" type="number"><br>
-<button onclick="openGift()">افتح</button>
+<input id="y" placeholder="سنة" type="number">
+</div>
+<br>
+<button type="button" onclick="openGift()">افتح</button>
 <p id="err"></p>
 </div>
 
 <div id="gift" class="card">
-<!-- الاغنية في الاول - شغالة على طول من غير اعلان -->
 <div class="top-song">❤️ أغنيتنا - أجمل فرحة - مها <span id="songBtn" onclick="toggleSong()">▶️</span></div>
 <iframe id="yt" src="https://www.youtube-nocookie.com/embed/lC_oE025a1g?enablejsapi=1&rel=0&modestbranding=1" allow="autoplay"></iframe>
 
@@ -97,16 +99,20 @@ iframe#yt{width:1px;height:1px;opacity:0;position:absolute;pointer-events:none}
 
 <script>
 function openGift(){
-let d=document.getElementById('d').value;
-let m=document.getElementById('m').value;
-let y=document.getElementById('y').value;
-if(d==19 && m==11 && y==2025){
+var d=document.getElementById('d').value.trim();
+var m=document.getElementById('m').value.trim();
+var y=document.getElementById('y').value.trim();
+var vals=[d,m,y].join(',');
+var ok = (vals.indexOf('19')!==-1 && vals.indexOf('11')!==-1 && vals.indexOf('2025')!==-1);
+if(ok){
 document.getElementById('lock').style.display='none';
 document.getElementById('gift').style.display='block';
-let start=new Date(2025,10,19);
-let now=new Date();
+var start=new Date(2025,10,19);
+var now=new Date();
 document.getElementById('daysCount').innerText=Math.floor((now-start)/(1000*60*60*24));
-}else{document.getElementById('err').innerText='التاريخ غلط، حاول تاني يا بابيتو';}
+}else{
+document.getElementById('err').innerText='التاريخ غلط، حاول تاني يا بابيتو - اكتب 19 / 11 / 2025';
+}
 }
 let songPlaying=false;
 function toggleSong(){
