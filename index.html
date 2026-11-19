@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لـ بابيتو ❤️</title>
+<style>
+body{background:#0a0000;color:white;font-family:Arial;text-align:center;padding:20px}
+.card{background:#1a0000;border:2px solid #ff1e3c;border-radius:25px;padding:25px;max-width:400px;margin:auto}
+input{width:70px;padding:12px;margin:5px;border-radius:12px;border:1px solid #ff1e3c;background:#000;color:white;text-align:center;font-size:18px}
+button{background:#ff1e3c;color:white;border:none;padding:13px 30px;border-radius:20px;font-size:18px;margin-top:15px}
+img{width:100%;border-radius:15px;margin-top:12px;border:2px solid #ff1e3c}
+#gift{display:none}
+audio{width:100%;margin-top:15px}
+</style>
+</head>
+<body>
+<div class="card" id="lock">
+<h1 style="font-size:50px">❤️</h1>
+<h2>اكتب التاريخ عشان تفتح</h2>
+<input id="d" placeholder="يوم" type="number">
+<input id="m" placeholder="شهر" type="number">
+<input id="y" placeholder="سنة" type="number"><br>
+<button onclick="openGift()">افتحي</button>
+<p id="err"></p>
+</div>
+<div class="card" id="gift">
+<h1>لـ بابيتو ❤️</h1>
+<p>كل سنة وانت طيب يا أحلى حاجة حصلتلي، النهاردة من سنة اعترفتلك بحبي، ودي كانت أحلى سنة في حياتي. بحبك أوي.</p>
+<h3>صورنا 📸</h3>
+<img src="https://via.placeholder.com/400x300/ff1e3c/ffffff?text=صورتنا+1">
+<img src="https://via.placeholder.com/400x300/ff1e3c/ffffff?text=صورتنا+2">
+<h3>اسمع ريكوردي 🎧</h3>
+<audio controls src=""></audio>
+<h2>بحبك ❤️</h2>
+</div>
+<script>
+function openGift(){
+let d=document.getElementById('d').value;
+let m=document.getElementById('m').value;
+let y=document.getElementById('y').value;
+if(d==19 && m==11 && y==2025){
+document.getElementById('lock').style.display='none';
+document.getElementById('gift').style.display='block';
+}else{
+document.getElementById('err').innerText='التاريخ غلط، حاول تاني يا بابيتو';
+}
+}
+</script>
+</body>
+</html>
